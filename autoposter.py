@@ -83,7 +83,7 @@ browser_options.set_preference("dom.webnotifications.enabled", False)
 
 #Setting up the browser driver and loading up the first page
 browser = webdriver.Firefox(options=browser_options, executable_path=r'C:\\Users\\Hamayel\\Desktop\\webdrivers\\geckodriver.exe')
-browser.get("https://www.facebook.com/nzubebotnzube/")
+browser.get("https://www.facebook.com/DESIREDLINKHERE/")
 print("Page Loading...")
 wait = ui.WebDriverWait(browser, 3)
 wait.until(page_loaded)
@@ -107,7 +107,7 @@ print("Login Information Sent...")
 
 #After succesfully logging into my facebook wall, switching over to the facebook page on which I want to post
 print("Page Loading...")
-browser.get("https://www.facebook.com/nzubebotnzube/")
+browser.get("https://www.facebook.com/FACEBOOKPAGE/")
 print("Page Loaded")
 
 
