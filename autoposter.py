@@ -24,17 +24,19 @@ def input_data(element, data):
 
 
 #Nzubepostbot 419 text generator
-first_word = random.choice(string.ascii_uppercase) + "".join([random.choice(string.ascii_lowercase) for i in range(random.randint(10, random.randint(15, 30)))])
 
 emoji_chance = 100
 threemoji_chance = 15
 symbol_chance = 30
 actual_word_chance = 5
 
-emojis = ['😂', '👌', '😂', '💀', '💋', '💩']
-threemojis = ['👫💯💵', '🍔🍖🐹']
-symbols = ['? ', '_', '-', '/', ':', '@', '8']
-actual_words = ['watchwhatyousay ', ' Hamayel', 'EA', 'FAg', ' eye why']
+emojis = [#your list of emojis here]
+threemojis = [#your list of emojis here]
+symbols = [#your list of symbols]
+actual_words = [#your list of actual words]
+
+def gen_first_word():
+    return random.choice(string.ascii_uppercase) + "".join([random.choice(string.ascii_lowercase) for i in range(random.randint(10, random.randint(15, 30)))])
 
 def new_word():
     n_word = " " + ''.join([random.choice(string.ascii_lowercase) for i in range(random.randint(2, (random.randint(3, 30))))])
@@ -63,9 +65,9 @@ def create_sentence():
         for i in range(len(edited_list)):
             rand_el = edited_list.index(random.choice(edited_list))
             final_list.append(edited_list.pop(rand_el))
-        sentence = first_word + "".join(final_list)
+        sentence = gen_first_word() + "".join(final_list)
     else:
-        sentence = first_word + "".join(gen_rand_words())
+        sentence = gen_first_word() + "".join(gen_rand_words())
     return sentence
 
 
